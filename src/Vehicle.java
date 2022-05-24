@@ -1,4 +1,4 @@
-public class Vehicle {
+public class Vehicle implements VehicleService {
     private String modelName;
     private int wheelsCount;
 
@@ -17,6 +17,17 @@ public class Vehicle {
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
+    }
+
+    public void printModelName(Vehicle vehicle) {
+        System.out.println("Обслуживаем " + vehicle.getModelName());
+    }
+
+    public void check() {
+        printModelName(this);
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            this.updateTyre();
+        }
     }
 
 }

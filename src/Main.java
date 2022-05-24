@@ -6,12 +6,10 @@ public class Main {
         Truck truck2 = new Truck("truck2", 8);
         Vehicle bicycle1 = new Vehicle("bicycle1", 2);
         Vehicle bicycle2 = new Vehicle("bicycle2", 2);
-        ServiceStation station = new ServiceStation();
-        station.check(car1);
-        station.check(car2);
-        station.check(truck1);
-        station.check(truck2);
-        station.check(bicycle1);
-        station.check(bicycle2);
+        VehicleService[] service = {car1, car2, truck1, truck2, bicycle1, bicycle2};
+        for (int i = 0; i < service.length; i++) {
+            service[i].check();
+        }
+
     }
 }
