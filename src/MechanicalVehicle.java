@@ -9,10 +9,10 @@ public class MechanicalVehicle extends Vehicle implements VehicleService{
     }
 
     public void check() {
-        printModelName(this);
-        for (int i = 0; i < this.getWheelsCount(); i++) {
-            this.updateTyre();
+        printModelName();
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
         }
-        this.checkEngine();
+        checkEngine();
     }
 }

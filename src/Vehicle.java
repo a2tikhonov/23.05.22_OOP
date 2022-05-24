@@ -19,14 +19,14 @@ public class Vehicle implements VehicleService {
         System.out.println("Меняем покрышку");
     }
 
-    public void printModelName(Vehicle vehicle) {
-        System.out.println("Обслуживаем " + vehicle.getModelName());
+    public void printModelName() {
+        System.out.println("Обслуживаем " + getModelName());
     }
 
     public void check() {
-        printModelName(this);
-        for (int i = 0; i < this.getWheelsCount(); i++) {
-            this.updateTyre();
+        printModelName();
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
         }
     }
 

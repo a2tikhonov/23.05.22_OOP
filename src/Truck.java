@@ -8,12 +8,12 @@ public class Truck extends MechanicalVehicle implements VehicleService {
     }
 
     public void check() {
-        printModelName(this);
-        for (int i = 0; i < this.getWheelsCount(); i++) {
+        printModelName();
+        for (int i = 0; i < getWheelsCount(); i++) {
             this.updateTyre();
         }
-        this.checkEngine();
-        this.checkTrailer();
+        checkEngine();
+        checkTrailer();
     }
 
 }
